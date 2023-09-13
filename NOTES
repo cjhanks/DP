@@ -1,0 +1,41 @@
+
+
+Levenshtein :
+	A | B
+        - + -
+	C | x
+
+	If equal:
+		x = A
+	Else:
+		x = Min(C, B)
+
+
+
+Djikstra:
+	Min(
+		cost[neigh.node]
+		cost[node] + neigh.cost
+	)
+
+
+Floyd Warshall
+	for k in vertex_index:
+	  for i in 1..vertex_index:
+            for j in 1..vertex_index:
+              a = cost[i][j]
+              b = cost[i][k] + cost[k][j]
+              cost[i][j] = Min(a, b)
+
+Knapsack:
+	for n in 1..elems:
+	  w = n.weight
+	  v = n.value
+	  for c in 1..capacity:
+	    if w < c:
+	      a = val + mat[n][c - w]
+	      b = mat[n - 1][c]
+
+	      mat[n, c] = max(a, b)
+	    else:
+	      mat[n, c] = mat[n - 1][c]
