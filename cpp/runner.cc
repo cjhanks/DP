@@ -5,7 +5,7 @@
 #include "sparse_matrix.hh"
 #include "max_path_sum.hh"
 #include "djikstra.hh"
-#include "largest_all_1.hh"
+#include "largest_all_k.hh"
 #include "lcs.hh"
 #include "scs.hh"
 #include "submatrix.hh"
@@ -255,7 +255,7 @@ main() {
 
   std::cerr << mat << "\n";
 
-  std::cerr << LargestAll1<unsigned>::Solve(mat)
+  std::cerr << LargestAllK<unsigned>::Solve(mat, 1)
             << "\n";
   }
 }
